@@ -1,0 +1,20 @@
+{
+  "name": "broken-babel-example",
+  "version": "1.0.0",
+  "description": "Example of regex issue causing babel to stack overflow",
+  "main": "index.js",
+  "scripts": {
+    "transpile": "babel src/index.js --config-file ./.babelrc -o dist/bundle.js",
+    "clean": "rimraf dist; mkdirp dist",
+    "build": "npm run clean; npm run transpile"
+  },
+  "author": "Chris Sakai",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^3.0.0"
+  }
+}
